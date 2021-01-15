@@ -1,0 +1,81 @@
+@import './reset';
+@import './variables';
+@import './menu';
+@import './about';
+@import './projects';
+@import './homepage';
+
+body {
+    background: $header-color;
+    color: $text-color;
+    height: 100vh;
+    line-height: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+a {
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+    text-decoration: $primary-color underline;
+}
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+
+}
+
+
+main {
+    height: 100%;
+    width: 100%;
+
+    .social-media {
+        position: fixed;
+        bottom: 12px;
+        left: 10px;
+
+        a {
+            padding: 10px;
+            color:orange;
+            font-size: 40px;
+            font-weight: $boldest;
+            border-style: groove;
+            border-color: $text-color;
+            border-radius: 50%;
+            @include transition-ease;
+
+            &:hover {
+                color: red;
+                font-size: 60px;
+            }
+        }
+        
+    }
+
+
+}
+
+footer {
+    position: fixed;
+    bottom: 23px;
+    right: 10px;
+    font-size: 15px;
+    text-align: right;
+    cursor: pointer;
+    @include transition-ease;
+
+    &:hover {
+        color: orange;
+        font-size: 17px;
+    }
+   
+}

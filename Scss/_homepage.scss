@@ -1,0 +1,47 @@
+.homepage {
+    height: 100%;
+    padding-top: 40vh;
+    text-overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background: 
+       linear-gradient(
+           to right,
+           rgba($primary-color, 0.5),
+           rgba(red, 0.6),
+       ),
+     url(/Images/IMG_20191130_104419_5-removebg-preview.png) top;
+     background-size: cover;
+     background-attachment: fixed;
+    
+
+
+    &-name {
+        font-weight: $boldest;
+        padding-bottom: 10px;
+       margin-bottom: 20px;
+       margin-top: 10px;
+        font-size: $header-size-2;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 50px;
+        border-bottom: 2px solid #fff;
+         
+        &-last {
+            color: orange;
+            
+            &:hover {
+                color: red;
+                font-size: 45px;
+                @include transition-ease;
+            }
+        }
+
+    }
+
+     &-title {
+            font-weight: 900;
+            line-height: 30px;
+            font-size: 25px;
+             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+}

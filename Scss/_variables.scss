@@ -1,0 +1,18 @@
+$primary-color: rgb(226, 11, 226);
+$text-color: #fff;
+$header-color: black;
+$secondary-color: orange;
+
+
+$bold: 400;
+$bolder: 700;
+$boldest: 900;
+
+
+$header-size-1: 28px;
+$header-size-2: 35px;
+$header-size-3: 45px;
+
+@mixin transition-ease {
+    transition: all 1s ease-in-out;
+}

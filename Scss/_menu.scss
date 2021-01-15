@@ -1,0 +1,165 @@
+.myMenu-btn {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top: 10px;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+    
+
+    &-hamburger {
+         background-color:white;
+         right: 0;
+         position: absolute;
+         height: 3px;
+         width: 23px;
+         top: 8px;
+         
+
+         &::before {
+             content: "";
+             background-color:orange;
+         right: 0;
+         position: absolute;
+         height: 3px;
+         width: 25px;
+         top: -8px;
+         
+         }
+       
+       &::after {
+           content: "";
+           background-color:orange;
+         right: 0;
+         position: absolute;
+         height: 3px;
+         width: 21px;
+         top: 8px;
+         
+       }
+          
+          &.openMenu {
+               transform: rotate(720deg);
+               background: transparent;
+
+               &::before {
+                   transform: rotate(45deg) translate(5px, 8px);
+               }
+
+               &::after {
+                   transform: rotate(-45deg) translate(3px, -7px);
+                   width: 25px;
+                   
+               }
+          } 
+    }
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 900;
+    color: orange;
+    border-radius: 25px;
+    border-style: groove;
+    border-color: white;
+    width: 200px;
+     position: absolute;
+    z-index: 1;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    height: 25px;
+    @include transition-ease;
+
+    &:hover {
+        color: white;
+        background-color: orange;
+        font-size: 25px;
+        width: 230px;
+    }
+}
+
+.dot {
+    color: white;
+    font-weight: 900;
+    font-size: 23px;
+}
+
+
+
+.nav {
+    width: 100vw;
+    position: fixed;
+    top:  0;
+    left: 0;
+    opacity: 0.9;
+     visibility: hidden;
+
+    
+
+    &.openMenu {
+        visibility: visible;
+    }
+    
+   .nav-menu {
+       display: flex;
+       flex-flow: column wrap;
+       align-items: center;
+       justify-content: center;
+       text-decoration: none;
+       list-style-type: none;
+       background: red;
+       height: 100vh;
+       width: 100vw;
+       overflow: hidden;
+       padding-right: 10px; 
+       transform: translateX(-100%);
+       @include transition-ease;
+        
+      
+
+
+       &.openMenu {
+           transform: translateY(0);
+       }
+
+       &-items {
+            transform: translateX(1);
+           @include transition-ease;
+
+          
+       
+
+       &.active > a {
+           color: orange;
+           font-weight: 900;
+       }
+       }
+   
+   &-links {
+       display: inline-block;
+       font-size: 25px;
+       text-transform: uppercase;
+       font-weight: 400;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 28px 0;
+           @include transition-ease;
+    
+    &:hover {
+        color: black;
+        font-size: 35px;
+        @include transition-ease;
+    }
+   }
+}
+
+}
+
+@for $i from 1 through 4 {
+    .nav-menu-items:nth-child(#{$i}) {
+        transition-delay: ($i * 0.4s) + 0.15s;
+    }
+}

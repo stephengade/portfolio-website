@@ -1,0 +1,135 @@
+.about-header-text {
+    color: $secondary-color;
+    font-family: cursive;
+    text-decoration: $primary-color underline;
+
+}
+
+.about {
+    padding-bottom: 30px;
+    
+    &-bio-image {
+        height: 50vh;
+        width: 100%;
+           
+           background: 
+       linear-gradient(
+           to right,
+           rgba($primary-color, 0.5),
+           rgba(red, 0.6),
+       ),
+     url(/Images/IMG_20191130_104419_5-removebg-preview.png) top;
+     background-size: cover;
+     background-attachment: fixed;
+
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     flex-direction: column;
+
+    }
+}
+
+.about-me {
+    margin: 2px;
+}
+
+    .about-intro {
+    margin-bottom: 10px;
+    padding: 20px;
+    line-height: 20px;
+    }
+
+    .jobs {
+        width: 80vw;
+        align-items: center;
+        margin: 20px auto 0 auto;
+
+        &-job {
+            width: 100%;
+            margin: 10px;
+            height: auto;
+            background: lighten(#000000, 10%);
+            border-bottom: 10px solid $secondary-color;
+            padding: 3px;
+
+            &:hover {
+                 background: lighten(red, 10%);
+                  border-bottom: 10px solid $primary-color;
+                  cursor: pointer;
+            }
+        }
+
+        .about-header-text {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+     h3 {
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          border-left: $secondary-color;
+          padding-left: 20px;
+          border-left-width:10px;
+          border-left-color: $secondary-color;
+          border-left-style: solid;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+          margin-bottom: 15px;
+
+          border-right-width:10px;
+          border-right-color: $secondary-color;
+          border-right-style: solid;
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px;
+        
+     }
+
+  h6 {
+     font-size: 25px;
+     margin-bottom: 15px;
+  }
+ p {
+      border-left-color: $secondary-color;
+          border-left-style: solid;
+          padding-left: 5px;
+          margin-bottom: 50px;
+
+          border-right-color: $secondary-color;
+          border-right-style: solid;
+          padding-right: 5px;
+ }
+
+
+.social-media {
+        display: flex;
+        flex-direction: column;
+
+           a {
+            padding: 10px;
+            color:red!important;
+            font-size: 15px!important;
+            font-weight: $boldest;
+            border-style: groove;
+            border-color: $text-color;
+            border-radius: 50%;
+            @include transition-ease;
+            margin-bottom: 30px;
+
+            &:hover {
+                color: $secondary-color!important;
+                font-size: 30px!important;
+            }
+        }
+    }
+
+ 
+
+ footer {
+     transform: rotate(90deg) translate(-75px, -89px);
+ }
+
+    }
+
+ 
+    
+ 
